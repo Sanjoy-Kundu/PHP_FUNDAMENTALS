@@ -1,0 +1,56 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 960px;
+	height: auto;
+	background-color: silver;
+	margin: 0 auto;
+
+}
+
+.header-title,
+.footer-title {
+	text-align: center;
+	background-color: rgb(38, 33, 33);
+	color: white;
+	height: 51px;
+	line-height: 48px;
+	word-spacing: 18px;
+}
+
+.left-right-title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.class-demo {
+	padding-top: 20px;
+	font-size: 30px;
+}
+
+.gap-top {
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.assignment-operator {
+	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.concate-operator {
+	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.assignment-operator p {
+	font-size: 30px;
+}
