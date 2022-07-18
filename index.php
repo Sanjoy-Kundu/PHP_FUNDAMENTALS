@@ -436,6 +436,268 @@ FINDING EVEN AND ODD NUMBER BETWEEN 1 to 20
 
 
 
+	/* ==================================
+FINDING EVEN AND ODD NUMBER BETWEEN 1 to 20
+===========================================*/
+echo "	<hr class='gap-top'>";
+echo "<h1>String Function strlen, str_word_count,  strrev, str_replace explore</h1>";
+echo "<br/> <br/>";
+
+
+echo "<h3>StrLen (total string length)</h3>";
+$countryName = "My country name is Bangladesh.";
+$totalLength = strlen($countryName);
+echo "Country Name ".$countryName."<br/>";
+echo "Total country length is ".$totalLength."<br/> <br/> <br/>";
+
+
+
+/* ========================================================
+String uppercase to lowercase and lowercase to uppercase
+===========================================================*/
+echo "<h3>String Uppercase to Lowercase</h3>";
+
+$demo1 = "Hello Buddy, Im form UK";
+$demo1LowerCase = strToLower($demo1);
+echo $demo1."<br/>";
+echo $demo1LowerCase."<br/> <br/> <br/>";
+
+
+
+
+echo "<h3>String Lowercase to Uppercase</h3>";
+$demo2 = "I want to be a PHP Developer.";
+$demo2ToUpperCase = strtoupper($demo2);
+echo $demo2."<br/>"; 
+echo $demo2ToUpperCase."<br/><br/> <br/>";
+
+ 
+
+
+/*==================================
+String word count
+=========================================*/
+echo "<h3>String total word Count</h3>";
+$demo3 = "Tree plantation means growing more trees. Trees are helpful to us in many ways";
+$demo3TotalWord = str_word_count($demo3);
+echo $demo3."<br/>";
+echo "Total word is ".$demo3TotalWord."<br/> <br/>";
+
+
+
+
+/*==================================
+sting reverse 
+=======================================*/
+echo "<h3>String reverse</h3>";
+$demo4 = "Hello PHP";
+$demo4Reverse = strrev($demo4);
+echo "General Way ".$demo4."<br/>";
+echo "Reverse Way ".$demo4Reverse."<br/> <br/><br/>";
+
+
+
+/* ===========================================================
+Str_replace 
+SYNTAX = str_replace("find", "replace", variable name)
+=============================================================*/
+
+echo "<h3>String replace</h3>";
+$massege1 = "Hello Dude. The world is nice";
+$replaceMassege = str_replace("world", "earth", $massege1);
+echo $massege1."<br/>";
+echo $replaceMassege."<br/>";
+
+
+
+
+
+
+
+
+
+	/* ==================================
+PHP ARRAY
+===========================================*/
+echo "	<hr class='gap-top'>";
+echo "<h1>PHP ARRAY</h1>";
+echo "<br/> <br/>";
+
+echo '<div>
+<h3>$colors = array("red", "green", "blue", "purple");</h3>
+$firstIndexOutput = $colors[0];<br/>
+$secondIndexOutput = $colors[1];<br/>
+$thirdIndexOutput = $colors[2];<br/>
+
+</div> <br/> <br/>';
+
+
+//declear an array
+echo "<p>Finding array using index number. index number start form 0</p><br/>";
+echo "<h3>Final Output <br/>";
+$colors = array("red", "green", "blue", "purple");
+$firstIndexOutput = $colors[0];
+$secondIndexOutput = $colors[1];
+$thirdIndexOutput = $colors[2];
+echo "First index is ".$firstIndexOutput."<br/>";
+echo "Second index is ".$secondIndexOutput."<br/>";
+echo "First index is ".$thirdIndexOutput."<br/> <br/> <br/>";
+
+
+
+/* ============================== 
+Array output using  foreach loop
+=================================*/
+
+echo '
+	<h2>Array output using  foreach loop</h2> <br/>
+<div>
+$peoples = ["Jony", "Roni", "Simul", "Akash", "Batash", "Banti vai"];<br/>
+$peoplesLength = count($peoples);<br/>
+foreach($peoples as $people){ <br/>
+	echo $people;<br/>
+}
+		</div> <br/>';
+
+echo "<h3>Final Output<h3>";
+$peoples = ["Jony", "Roni", "Simul", "Akash", "Batash", "Banti vai"];
+$peoplesLength = count($peoples);
+foreach($peoples as $people){
+	echo $people."<br/>";
+};
+echo "<br/><br/>";
+
+
+
+/*=====================================
+Array output using for loop
+==================================*/
+echo '
+	<h2>Array output using  for loop</h2> <br/>
+		<div>
+			$fruits = ["Mango", "Jackfruits", "Blackbary", "Gragon"];<br/>
+			$totalFruits = count($fruits);<br/>
+			for($i = 0; $i < $totalFruits; $i++){ <br/>
+				echo $fruits[$i]."<br/>";
+			}
+		</div> 
+	<br/>';
+
+echo "<h3>Final Output<h3>";
+$fruits = ["Mango", "Jackfruits", "Blackbary", "Gragon"];
+$totalFruits = count($fruits);
+for($i = 0; $i < $totalFruits; $i++){
+	echo $fruits[$i]."<br/>";
+}
+
+
+
+
+
+
+
+
+	/* ==================================
+PHP Associative ARRAY(key value pair)
+===========================================*/
+echo "	<hr class='gap-top'>";
+echo "<h1>PHP Associative ARRAY(key value pair)</h1>";
+echo "<br/> <br/>";
+
+echo ' 
+	<div> 
+	<h2>Associative array syntax: </h2>
+	$country = array(Banglasesh => 1971, India => 1047, Japan = 1932);<br/>
+	<br/>
+
+	$country[Bangladesh] = 1971;<br/>
+	$country[India] = 1971;<br/>
+	$country[Japan] = 1932;<br/>
+	</div><br/>
+';
+
+$ages = array("Romin" => 70, "Khokon"  => 60, "Jibon" => 50);
+echo  "Im Romin".$ages['Romin']."Years old";
+
+/* 
+===================================================================================
+Multidimentional Array
+===============================================================================
+*/
+echo "	<hr class='gap-top'>";
+echo "<h1>PHP Multidimentional Array</h1>";
+echo "<br/> <br/>";
+
+
+echo '
+			<div>
+			$routine = array(
+				"ONE" => array("mango", "jackfruits", "banana",array(12, 100, 21)),<br/>
+				"TWO" => array("Dhka", array("Madaripur", "JamalPur", "Barisal"), "Khulna", 7902),<br/>
+				"CARS" => array("Hanif", "Sakura", "Ena", "London Express", array("Volvo", "SCANIA", "HINO", "HUNDAI"))<br/>
+		);<br/><br/>
+		
+		echo $routine["ONE"][3][1]."; <br/>"
+		echo $routine["ONE"][1].";<br/>"
+		echo $routine["CARS"][3].; "<br/>"
+		echo $routine ["CARS"][4][0].; "<br/>"
+			</div>
+';
+
+$routine = array(
+		"ONE" => array("mango", "jackfruits", "banana",array(12, 100, 21)),
+		"TWO" => array("Dhka", array("Madaripur", "JamalPur", "Barisal"), "Khulna", 7902),
+		"CARS" => array("Hanif", "Sakura", "Ena", "London Express", array("Volvo", "SCANIA", "HINO", "HUNDAI"))
+);
+
+
+echo "Total output is ".$routine["ONE"][3][1]."<br/>"; //100
+echo "Total output is ".$routine["ONE"][1]."<br/>";//jackfruits
+echo "Total output is ".$routine["CARS"][3]."<br/>"; //london Express
+echo "Total output is ".$routine ["CARS"][4][0]."<br/>"; //volvo
+
+echo "<br/> <br/>";
+echo "<br/> <br/>";
+
+echo '
+	<div>
+	$diet = array(<br/>
+		"day_one" => array("apple", "banana", "ginger"),<br/>
+		"day_two" => array("kiwi", "salt", "egg", <br/>
+													array("salt" => "0.5%", "kiwi" => "1.2%", <br/>"egg" => "1%"), array(10, 11, 12,13)),<br/>
+	);<br/>
+	echo $diet["day_two"][2]; <br/>
+	echo $diet["day_two"][3]["salt"];<br/>
+	echo $diet["day_two"][4][0];<br/>
+	</div>
+
+';
+
+
+
+
+$diet = array(
+	"day_one" => array("apple", "banana", "ginger"),
+	"day_two" => array("kiwi", "salt", "egg", 
+												array("salt" => '0.5%', "kiwi" => "1.2%", "egg" => "1%"), array(10, 11, 12,13)),
+);
+echo $diet["day_two"][2]; //egg
+echo $diet["day_two"][3]["salt"]; // 0.5%
+echo $diet["day_two"][4][0]; //10
+
+
+
+
+
+/* 
+====================================================================================
+PHP FUNCTION
+=================================================================================
+*/
+echo "	<hr class='gap-top'>";
+echo "<h1>PHP FUNCTION</h1>";
+echo "<br/> <br/>";
+
 
 
 
