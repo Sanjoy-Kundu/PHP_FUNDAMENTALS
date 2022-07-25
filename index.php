@@ -847,11 +847,44 @@ echo '
 echo "<br/> <br/> <br/>" ;
 
 
-echo "<h1>SUPERGLOBAL VARIABLE GET AND POST</h1>"
+echo "<h1>SUPERGLOBAL VARIABLE GET AND POST</h1>";
+echo "<br/>
+<h3> form submit GET data url pass </h3>
+<p>GET দিয়ে সাধারনত ডাটা  url  দেখা  যায়। আমরা  form  যখন submit করবো তখন তার মেথড  যদি post  লিখি এবং ডাটা যদি সাবমিট করি তখন ডাটা যাবে url এ</p>
 
+<p>POST দিয়ে ডাটা একটা  ফইল  থেকে অন্য ফাইলে নেওয়ার জন্য POST মেথড ব্যবহার করা হয়।</p>
 
+";
 
+echo "<br/><br/>";
 ?>
+
+<form action="index2.php" method="post">
+	<table>
+		<tr>
+			<td>Name: </td>
+			<td><input type="text" name="name" id="" placeholder="Enter Your Name"></td>
+		</tr>
+		<tr>
+			<td>Email: </td>
+			<td><input type="email" name="email" id="" placeholder="Enter Your Email"></td>
+		</tr>
+		<tr>
+			<td>Address: </td>
+			<td><input type="text" name="address" id="" placeholder="Enter Your Address"></td>
+		</tr>
+		<tr>
+			<td>Phone: </td>
+			<td><input type="number" name="number" id="" placeholder="Enter Your Number"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" value="Submit"></td>
+		</tr>
+	</table>
+</form>
+
+
 
 	</main>
 	<footer class="container">
