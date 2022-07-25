@@ -801,7 +801,54 @@ echo '
 <li><h3>$_COOKIE</h3></li>
 <li><h3>$SESSION</h3></li>
 </ol>
+
+
+<br/>
+<br/> <br/>
+<h2>$GLOBALS VARIABLE</h2>
+<br/>
+$m = 10; <br/>
+$n = 20;<br/>
+
+function sum(){ <br/>
+	$GLOBALS["z"] = $GLOBALS["m"] + $GLOBALS["n"]; <br/>
+}<br/>
+sum(); <br/>
+echo $z; <br/>
+
 ';
+
+$m =10;
+$n = 20;
+
+function sum(){
+	$GLOBALS["z"]  = $GLOBALS["m"] + $GLOBALS["n"];
+}
+sum();
+echo "<h3>FInal Output </h3>";
+echo $z;
+echo "<br/> <br/> <br/>" ;
+
+
+echo "<h1>_SERVER(SUPER GLOBALS VARIABLE)</h1>";
+echo '
+	<h2>_SERVER</h2>
+	<ol>
+		<li>$_SERVER["PHP_SELF]</li>
+		<p>output php index file</p>
+		<li>$_SERVER["SERVER_NAME]</li>
+		<p>Output server Name</p>
+		<li>$_SERVER["HTTP_USER_AGENT]</li>
+		<p>own server name such as google chrome</p>
+		<li>$_SERVER["SERVER_ADDR"]<li>
+		<p>server localhost id</p>
+	</ol>
+';
+echo "<br/> <br/> <br/>" ;
+
+
+echo "<h1>SUPERGLOBAL VARIABLE GET AND POST</h1>"
+
 
 
 ?>
