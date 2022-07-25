@@ -698,11 +698,113 @@ echo "	<hr class='gap-top'>";
 echo "<h1>PHP FUNCTION</h1>";
 echo "<br/> <br/>";
 
+echo "<h2>Simple Function</h2>";
+echo '
+	<div>
+			function greetings(){ <br/>
+				echo "My name is Sanjoy"; <br/>
+			}<br/>
+			greetings(); <br/>
+	</div>
+';
 
+echo "<br/>";
+echo "<h2>Function with passing argument</h2>";
+echo '<div>
+		function fullName($firstName, $lastName){ <br/>
+			$finalName = "My name is ".$firstName." ".$lastName; <br/>
+				echo $finalName;<br/>
+		}<br/>
+	</div>';
+
+	echo "<br>";
+	echo "<h2>Function with by default parameter</h2>";
+	echo '
+		<div>
+		function fruits($fruits = "Mango"){ <br/>
+			echo "My favourite food is $fruits"; <br/>
+		}<br/>
+		
+		</div>
+	';
+
+/* =========== simple function =============*/
+function greetings(){
+	echo "My name is Sanjoy.";
+}
+
+
+/*================ function pass argument ===========*/
+function fullName($firstName, $lastName){
+	$finalName = "My name is ".$firstName." ".$lastName;
+	echo $finalName;
+};
+echo "<br/>";
+
+
+/* ============  create a function using default parameter========*/
+function fruits($fruits = "Mango"){
+	echo "My favourite food is $fruits";
+}
+
+
+/*========== function Output =========*/
+
+echo "<br/>";
+/*================simple function output ========= */
+echo "<h3>Final Output single function</h3>";
+greetings();
+echo "<br/>";
+/* ============== function output using parameter =========*/
+echo "<h3>Final Output passing function argument</h3>";
+fullName("Sanjoy", "Sanjoy");
+echo "<br/>";
+
+/* ============  create a function using default parameter========*/
+echo "<h3>Final Output using by default parameter</h3>";
+fruits("Apple");
+echo "<br/>";
+fruits();
+?>
+
+
+
+
+
+
+
+
+
+<?php
+/* 
+====================================================================================
+PHP SUPER GLOBALS
+=================================================================================
+*/
+echo "	<hr class='gap-top'>";
+echo "<h1>PHP SUPERGLOBALS</h1>";
+echo "<br/> <br/>";
+
+
+echo '
+<h2>Most Super Globals Are:</h2>
+<ol>
+<li><h3>$_GLOBALS</h3></li>
+<li><h3>$_SERVER</h3></li>
+<li><h3>$_REQUEST</h3></li>
+<li><h3>$_POST</h3></li>
+<li><h3>$_GET</h3></li>
+<br/>
+<br/>
+<li><h3>$_FILE</h3></li>
+<li><h3>$_ENV</h3></li>
+<li><h3>$_COOKIE</h3></li>
+<li><h3>$SESSION</h3></li>
+</ol>
+';
 
 
 ?>
-
 
 	</main>
 	<footer class="container">
