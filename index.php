@@ -857,9 +857,42 @@ echo "<br/>
 ";
 
 echo "<br/><br/>";
+echo '
+<p>Now if we are working this form atfirst we can send all input field information form <span style="color:red">index.php</span> to <span style="color:red">index2.php</span></p>
+
+<p>Now we can set the form action index2.php for send all information send this file and set method name is qualto POST.</p>
+ <br/><br/>
+<div>
+form action="index2.php" method="post" <br/>
+table <br/>
+	tr <br/>
+		tdName: /td <br/>
+		tdinput type="text" name="name" id="" placeholder="Enter Your Name"/td <br/>
+	/tr <br/>
+	tr <br/>
+		tdEmail: /td <br/>
+		tdinput type="email" name="email" id="" placeholder="Enter Your Email"/td <br/>
+	/tr <br/>
+	tr <br/>
+		tdAddress:  <br/>/td <br/>
+		tdinput type="text" name="address" id="" placeholder="Enter Your Address"/td <br/>
+	/tr <br/>
+	tr <br/>
+		tdPhone: /td <br/>
+		tdinput type="number" name="number" id="" placeholder="Enter Your Number"/td> <br/>
+	/tr <br/>
+	tr <br/>
+		td/td <br/>
+		tdinput type="submit" value="Submit"/td> <br/>
+	/tr <br/>
+/table <br/>
+/form <br/>
+</div>
+===========================================
+';
 ?>
 
-<form action="index2.php" method="post">
+<form action="index2.php" method="POST">
 	<table>
 		<tr>
 			<td>Name: </td>
@@ -874,15 +907,74 @@ echo "<br/><br/>";
 			<td><input type="text" name="address" id="" placeholder="Enter Your Address"></td>
 		</tr>
 		<tr>
+			<td>Date Of Birth: </td>
+			<td><input type="date" name="date" id=""    ></td>
+		</tr>
+		<tr>
+			<td>Gender: </td>
+			<td>
+				<input type="radio" name="gender" id="" value="Male">Male
+				<input type="radio" name="gender" id="" value="Female">Female
+		</td>
+		</tr>
+		<tr>
 			<td>Phone: </td>
 			<td><input type="number" name="number" id="" placeholder="Enter Your Number"></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td><input type="submit" value="Submit"></td>
+			<td><input type="submit" value="Submit" name="submit"></td>
 		</tr>
 	</table>
 </form>
+
+<?php
+echo '
+<h3>Validation INFO<h3><br/>
+if(isset($_POST["submit"]) == "POST"){<br/>
+	if(empty($_POST["name"])){<br/>
+		echo "<span style=color:red">Name field is required</span>";<br/>
+	}else{ <br/>
+		echo $_POST["name"]; <br/>
+	}<br/> <br/>
+	if(empty($_POST["email"])){<br/>
+		echo "<span style=color:red">Email Field is Required</span>";<br/>
+	}else{<br/>
+		echo  $_POST["email"];<br/>
+	}<br/> <br/>
+
+	if(empty($_POST["address"])){ <br/>
+		echo "<span style=color:red">Address field is required</span>";<br/>
+	}else{<br/>
+		echo  $_POST["address"];<br/>
+	}<br/><br/>
+	
+	if(empty($_POST["date"])){<br/>
+		echo  "<span style= color:red">Please select Your Date of Birth</span>"<br/>
+	}else{<br/>
+		echo $_POST["date"];<br/>
+	}<br/><br/>
+
+	if(empty($_POST["gender"])){<br/>
+		echo "<span style=color:red">Please select a option</span>";<br/>
+	}else{<br/>
+		echo  $_POST["gender"];<br/>
+	}<br/><br/>
+
+	if(empty($_POST["number"])){<br/>
+		echo  "<span style=color:red">This field is required</span>";<br/>
+	}else{<br/>
+		echo $_POST["number"];<br/>
+	}<br/>
+}<br/>
+
+
+
+
+
+'
+
+?>
 
 
 
