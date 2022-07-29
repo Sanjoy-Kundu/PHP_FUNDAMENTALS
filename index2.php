@@ -46,8 +46,34 @@ if(isset($_POST["submit"]) == "POST"){
 	}else{
 		echo "Your Mobile Number is".$_POST["number"]."<br/>";
 	}
+	
 }
 
+?>
+
+
+<?php
+	 if(empty($_POST["number_one"])){
+	echo "This Filed is required";
+}else{
+	if(empty($_POST["number_two"])){
+		echo "This field is required";
+	}else{
+		if($_POST["action_btn"] == "add"){
+			$result = $_POST["number_one"] + $_POST["number_two"];
+			echo "Total Addition is ".$result;
+		} else if($_POST["action_btn"] == "sub"){
+			$result = $_POST["number_one"] - $_POST["number_two"];
+			echo "Total subtruction is ".$result;
+		}else if($_POST["action_btn"] == "multi"){
+			$result = $_POST["number_one"]  * $_POST["number_two"];
+			echo "Total multiplication is".$result;
+		}else if($_POST["action_btn"] == "div"){
+			$result = $_POST["number_one"] / $_POST["number_two"];
+			echo "Total division is ".$result;
+		}
+	}
+} 
 
 
 

@@ -890,6 +890,10 @@ table <br/>
 </div>
 ===========================================
 ';
+
+echo "	<hr class='gap-top'>";
+echo "<h1>PHP FORM DATE FIND</h1>";
+echo "<br/> <br/>";
 ?>
 
 <form action="index2.php" method="POST">
@@ -965,17 +969,78 @@ if(isset($_POST["submit"]) == "POST"){<br/>
 		echo  "<span style=color:red">This field is required</span>";<br/>
 	}else{<br/>
 		echo $_POST["number"];<br/>
+		}<br/>
 	}<br/>
-}<br/>
+';
 
 
 
+echo "	<hr class='gap-top'>";
+echo "<h1>PHP SIMPLE MATH</h1>";
+echo "<br/> <br/>";
 
 
-'
-
+echo '
+if(empty($_POST["number_one"])){ <br/>
+	echo "This Filed is required"; <br/>
+}else{ <br/>
+	if(empty($_POST["number_two"])){ <br/>
+		echo "This field is required"; <br/>
+	}else{ <br/>
+		if($_POST["action_btn"] == "add"){ <br/>
+			$result = $_POST["number_one"] + $_POST["number_two"]; <br/>
+			echo "Total Addition is ".$result; <br/>
+		} else if($_POST["action_btn"] == "sub"){ <br/>
+			$result = $_POST["number_one"] - $_POST["number_two"]; <br/>
+			echo "Total subtruction is ".$result; <br/>
+		}else if($_POST["action_btn"] == "multi"){ <br/>
+			$result = $_POST["number_one"]  * $_POST["number_two"]; <br/>
+			echo "Total multiplication is".$result; <br/>
+		}else if($_POST["action_btn"] == "div"){ <br/>
+			$result = $_POST["number_one"] / $_POST["number_two"]; <br/>
+			echo "Total division is ".$result; <br/>
+		} <br/>
+	} <br/> <br/>
+	';
 ?>
 
+<form action="index2.php" method="POST">
+		<table>
+			<tr>
+				<td>Number 1: </td>
+				<td><input type="number" name="number_one" id="" placeholder="Enter Your Number "></td>
+			</tr>
+			<tr>
+				<td>Number 2: </td>
+				<td><input type="number" name="number_two" id="" placeholder="Enter Your Number "></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+						<input type="submit" value="add" name="action_btn">
+						<input type="submit" value="sub" name="action_btn">
+						<input type="submit" value="multi" name="action_btn">
+						<input type="submit" value="div" name="action_btn">
+						<input type="submit" value="clear" name="action_btn">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+
+	<?php 
+	echo "	<hr class='gap-top'>";
+	echo "<h1>PHP SESSION WITH FROM & MATH CALCULATOR</h1>";
+	echo "<h2>SESSION IS A SUPERGLOBAL VARIABLE {'$-SESSION[any_name] = #result'}</h2>";
+	echo "<br/> <br/>";
+
+	echo " 
+	<h3>SESSION হচ্ছে আমরা মুলত একটা পেইজে (index.php)একটা ফরম তেরি করবো তার ভ্যালিডেশন আমরা অন্য একটা পেইজে(value.php) করতাম এবং যেই পেইজে ভ্যালিডেশন করতাম সেই পেইজে আউটপুট দেখাইতাম। <br/> <br/>
+	 তবে আমরা এখন  (index.php) এ একটা ফরম তেরি করবো এবং তার ভ্যালিডেশন করবো (value.php)। এখন (value.php) এ ভ্যালিডেশন করবো ঠিক আছে  কিন্তু আমরা তার আউটপুট দেখাবো (index.php) মানে যেখানে ফরম তৈরি করবো সেখানে। <span style='color:red'>এজন্য আমদেরSESSION ব্যবহার করতে হবে।</span></h3>
+	"
+	
+	
+	?>
 
 
 	</main>
